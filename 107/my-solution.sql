@@ -1,1 +1,1 @@
-SELECT lidesired - lipurchased AS "Items Still Desired" from listitems;
+SELECT (1 -((lidesired - lipurchased)/lidesired))*100 || '%' AS "Fulfillment" from listitems;
